@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>miniFacebook</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/Session.js"></script>
+  <script src="js/navbar.js" defer></script>
+  <script src="js/profil.js" defer></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+   <div class="login">
+    <img src="img/logo.png" class="logo" id="btn-home">
+    <div class="search" id="bar-search">
+      <input type="text" placeholder="search" id="search-friend">
+      <div class="icon-search" id="btn-search">
+        <img src="img/search.png" class="icon-design">
+      </div>
+    </div>
+    <div class="user-nav">
+      <div class="icon-navbar btn-navbar-profil" id="btn-navbar-profil">
+        <img src="img/profil.png" class="icon">
+      </div>
+        <div class="icon-navbar message-inbox">
+          <img src="img/inbox.png" class="icon">
+        </div>
+      <div class="icon-navbar">
+        <img src="img/notification.png" class="icon">
+      </div>
+      <div class="icon-navbar btn-navbar-profil" id="btn-navbar-settings">
+        <img src="img/settings.png" class="icon">
+      </div>
+      <div class="settings" id="logout">
+          <div class="logout">
+              <p>Logout</p>
+          </div>
+      </div>    
+    </div>
+  </div>
+  <div class="profiluser">
+    <div class="picture-copert">
+        <img src="" class="copert-img-profil" id="user-copert-img">
+        <button id="add-copert" class="btn-upload-copert">Adauga fotografie de coperta</button>
+      <div class="profil-user-img">
+          <img src="" class="user-img-profil" id="user-profil-img">
+          <button id="add-profil" class="btn-upload-profil">+</button>
+      </div>
+    </div>
+    <h2 id="name-user" class="name-user">Chindris Petru</h2>
+    <div class="line"></div>
+    <ul class="menu-profil">
+        <li>Postari</li>
+        <li>Cronologie</li>
+        <li>About</li>
+        <li>
+            <a href="#" id="btn-add-friend"  class="other">
+                add Friend
+            </a>
+        </li>
+        <li >
+            <a href="#" id="btn-follow" class="other1">
+                Follow
+            </a>
+        </li>
+        <li>
+        <a href="#" id="btn-post">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            New post
+        </a>
+        </li>
+    </ul>
+  </div>
+  <div class="container">
+  	<div class="profil-card">
+            <div class="profil card-friends details-user">
+              <h3>Details</h3>
+              <table class="details-table" id="table-details">
+                <tr>
+                  <td>Favorite day</td>
+                  <td>none</td>
+                </tr>
+                <tr>
+                  <td>Favorite music</td>
+                  <td>none</td>
+                </tr>
+                <tr>
+                  <td>Favorite food</td>
+                  <td>none</td>
+                </tr>
+                <tr>
+                  <td>Date of birth</td>
+                  <td>none</td>
+                </tr>
+                <tr>
+                  <td>Friends</td>
+                  <td>none</td>
+                </tr>
+                <tr>
+                  <td>Location</td>
+                  <td>none</td>
+                </tr>
+                <tr>
+                  <td>Studies</td>
+                  <td>none</td>
+                </tr>
+              </table>
+              <button id="btn-update">Update</button>
+	    </div>
+	    <div class="profil card-friends picture" id="pictures">
+	      <h3>Pictures</h3>
+	    </div>
+	    <div class="profil card-friends my-friends" id="template-friends">
+	      <h3>Friends</h3>
+	    </div>
+    </div>
+      <div class="container-postari" id="container-post">
+      </div>
+    <div class="background-post" id="post-background">
+        <div class="post-menu" id="menu-post">
+            <h3>New Post</h3>
+                <div class="description-post">
+                    <input type="text" placeholder="your description" id="description-post"/>
+                </div>
+                <div class="image-post" id="background-image">
+                    <input type="file"  id="add-file-post" style="display:none" accept="image/x-png,image/jpeg"/>
+                    <img src="" alt="" class="image-post-background" id="img-post"/>
+                </div>
+                <div class="btn-control">
+                    <p id="error"></p>
+                    <button id="btn-anuleaza-post">Cancel</button
+                    <p class="btn-margin"></p>
+                    <button  id="btn-add-img-post" >Picture</button>
+                    <p class="btn-margin"></p>
+                    <button id="btn-post-new"  >Post</button>
+                </div>
+        </div>
+    </div>
+    <div class="Details-background" id="menu-background">
+        <div class="Details" id="menu-details">
+            <h2>Details</h2>
+            <form>
+                <Label>Favorite Day</Label>
+                <select id="favday">
+                    <option>None</option>
+                    <option>Monday</option>
+                    <option>Tuesday</option>
+                    <option>Wednesday</option>
+                    <option>Thursday</option>
+                    <option>Friday</option>
+                    <option>Saturday</option>
+                    <option>Sunday</option>
+                </select>
+                <Label>Favorite Music</Label>
+                <select id="favmusic">
+                    <option>None</option>
+                    <option>Dance</option>
+                    <option>Pop</option>
+                    <option>Rock</option>
+                    <option>Hip-Hop</option>
+                </select>
+                <Label>Favorite Food</Label>
+                <select id="favfood">
+                    <option>None</option>
+                    <option>Pizza</option>
+                    <option>Shawarma</option>
+                    <option>Salad</option>
+                    <option>Soup</option>
+                </select>
+                <Label>Date of birth</Label>
+                <input type="date" id="dateofbirth"/>
+                <Label>Location</Label>
+                <select id="locat">
+                        <option>Suceava</option>
+                        <option>Washington</option>
+                        <option>Londra</option>
+                        <option>Liverpool</option>
+                        <option>Paris</option>
+                </select>
+                <Label>Studies</Label>
+                <select id="studies">
+                    <option>None</option>
+                    <option>FIESC</option>
+                    <option>FDSA</option>
+                    <option>FFS</option>
+                    <option></option>
+                </select>
+                <div class="btn-details">
+                    <button id="btn-anuleaza-details">Anuleaza</button>
+                    <button  id="update-details" type="submit">Update</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

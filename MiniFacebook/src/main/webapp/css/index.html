@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>miniFacebook</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script  src="js/login.js" defer></script>
+  <script src="js/register.js" defer></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div class="login">
+    <img src="img/logo.png" class="logo">
+    <div class="login-form">
+      <form id="login">
+        <div class="input-box">
+          <div class="icon-box">
+            <img src="img/mail.svg" class="icon-login">
+          </div>
+          <input type="text" placeholder="e-mail" class="" id="email-login">
+        </div>
+        <div class="input-box">
+          <div class="icon-box">
+            <img src="img/key.svg" class="icon-login">
+          </div>
+          <input type="password" placeholder="password" class="" id="password-login">
+        </div>
+        <button id="btn-login">Login</button>
+      </form>
+    </div>
+  </div>
+  <div id="login-alert">
+
+  </div>
+  <div class="register">
+    <h2>Register</h2>
+    <div class="register-form">
+      <form id="form-register">
+        <div id="register-alert">
+
+        </div>
+        <input type="text" placeholder="first name" id="register-first-name" class="">
+        <input type="text" placeholder="last name" id="register-last-name" class="">
+        <input type="text" placeholder="e-mail" id="register-email" class="">
+        <select class="gender" id="gender">
+          <option>None</option>
+          <option>Male</option>
+          <option>Female</option>
+          <option>Other</option>
+        </select>
+        <input type="password" placeholder="password" id="register-password" class="">
+        <input type="password" placeholder="confirm password" id="register-confirm-password" class="">
+        <button id="register-btn" type="submit">Register</button>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
